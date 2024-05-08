@@ -7,7 +7,7 @@ const ages = [3, 9, 23, 64, 2, 8, 28, 93];
 
     const lastIndex = ages.length - 1;
     const difference = ages[lastIndex] - ages[0];
-    console.log("Difference between last and first element:", difference);
+    console.log("The difference between the last and first element is:", difference);
 
 // Add a new age to the array
     ages.push(42);
@@ -46,10 +46,7 @@ let concatenatedNames = '';
 
 for (let i = 0; i < names.length; i++){
     concatenatedNames += " " + names [i];
-    if (i < names.legth -1){
-        concatenatedNames + " ";
-    }
-}  
+    }  
 
 console.log (`${concatenatedNames}`);
 
@@ -98,9 +95,17 @@ console.log (firstName + " " + lastName);
 //QUESTION 9//    
 //Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 
-const sumOfAllNums = [5, 9, 100, 5, 2,];
+var sumOfAllNums = [5, 9, 100, 5, 2,];
 
-console.log (sumOfAllNums.reduce ((a, b) => true)) ;
+function isSumGreaterThan100 (array) {
+    var sumGreater = array.reduce((a, b) => a + b, 0);
+    if (sumGreater > 100) {
+        return true;
+    } else {
+        return false;
+    } 
+}
+console.log (isSumGreaterThan100(sumOfAllNums));
 
      
 //QUESTION 10//
@@ -148,7 +153,7 @@ console.log(willBuyDrink(isHotOutside, moneyInPocket));
 //Question 13//
 //Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
 
-//Comments: We will go on vacation if the kids are no longer in school and the month is July.
+//Comments: We will go on vacation if the kids are no longer in school and the month is July. Why this: Because I haven't been on vacation or seen my family since Covid started.  I chose this particular function becuase it seemed like the easiest way to figure out if a vacation was possible based on 2 parameters, being the month of July and my son not being in school.  Since that's when we're actually going on vacation, that's why I picked those values.  :-)
 
 let kidsInSchool = 'no';
 let month = 'July';
@@ -159,6 +164,5 @@ let month = 'July';
 
 console.log (goOnVacation (kidsInSchool, month))
 
-//end
 
 
